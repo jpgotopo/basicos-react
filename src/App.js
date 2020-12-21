@@ -3,11 +3,21 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 function App() {
+
+  //Obtener la fecga
+  const fecha = new Date().getFullYear();
+
   return (
     <Fragment>
-      <Header />
-
-      <Footer />
+      <Header 
+        titulo='Tienda Virtual'
+      
+      />
+        
+      <Footer 
+        fecha={fecha}
+      
+      />
     </Fragment>
   );
 }
