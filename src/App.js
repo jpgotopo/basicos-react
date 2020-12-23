@@ -13,6 +13,10 @@ function App() {
     { id: 4, nombre: 'Camisa Ανγυλαρ Js', precio: 30 },
   ]);
 
+  //State para un carrito de compras
+
+  const [carrito, agregarProducto] = useState([])
+
   //Obtener la fecga
   const fecha = new Date().getFullYear();
 
@@ -27,6 +31,9 @@ function App() {
         <Producto 
           key={producto.id}
           producto = {producto}
+          productos={productos}
+          carrito = {carrito}
+          agregarProducto={agregarProducto}
         />
       ))}
       <Footer 
