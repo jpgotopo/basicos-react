@@ -15,7 +15,7 @@ function App() {
 
   //State para un carrito de compras
 
-  const [carrito, agregarProducto] = useState([])
+  const [carrito, agregarProducto] = useState([]);
 
   //Obtener la fecga
   const fecha = new Date().getFullYear();
@@ -27,14 +27,14 @@ function App() {
       
       />
       <h1>Lista de Productos</h1>
-      {productos.map(producto =>(
-        <Producto 
-          key={producto.id}
-          producto = {producto}
-          productos={productos}
-          carrito = {carrito}
-          agregarProducto={agregarProducto}
-        />
+        {productos.map((producto, index) =>(
+          <Producto 
+            key={index}
+            producto = {producto}
+            productos={productos}
+            carrito = {carrito}
+            agregarProducto={agregarProducto}
+          />
       ))}
 
       <Carrito 
